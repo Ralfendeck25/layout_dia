@@ -2,6 +2,7 @@
   "name": "dia",
   "version": "1.0.0",
   "description": "Dia landing page",
+  "homepage": "https://Ralfendeck25.github.io/layout_dia",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
@@ -10,7 +11,8 @@
     "lint": "npm run style-format && npm run format && mate-scripts lint",
     "test:only": "mate-scripts test",
     "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
